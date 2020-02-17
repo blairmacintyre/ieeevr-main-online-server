@@ -20,6 +20,7 @@ const credentials = {
 const targetBaseUrl = 'http://hubs.ieeevr.online';
 
 function handleRedirect(req, res) {
+  console.log(req.originalUrl);
   const targetUrl = targetBaseUrl + req.originalUrl;
   res.redirect(targetUrl);
 }
