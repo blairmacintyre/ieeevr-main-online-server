@@ -1,0 +1,27 @@
+{
+  "name": "ieeevr-main-online-server",
+  "version": "1.0.0",
+  "description": "Server for IEEE VR Online top level",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "pm2": "^4.2.3"
+  },
+  "scripts": {
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blairmacintyre/ieeevr-main-online-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blairmacintyre/ieeevr-main-online-server/issues"
+  },
+  "homepage": "https://github.com/blairmacintyre/ieeevr-main-online-server#readme"
+}
