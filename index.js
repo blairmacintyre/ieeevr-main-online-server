@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const targetBaseUrl = 'http://ieeevr.org/2020/';
+const targetBaseUrl = 'http://hubs.ieeevr.online/';
 
 function handleRedirect(req, res) {
   const targetUrl = targetBaseUrl + req.originalUrl;
