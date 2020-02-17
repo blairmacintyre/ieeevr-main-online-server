@@ -8,7 +8,11 @@ function handleRedirect(req, res) {
   res.redirect(targetUrl);
 }
 
-app.get('*', handleRedirect);
+app.get('.well-known/acme-challenge/AFXirU3FJ2twGUkPJLt-AZ2IdouvcAQU0peSIvegJtI', (req,res) => {
+  res.send("AFXirU3FJ2twGUkPJLt-AZ2IdouvcAQU0peSIvegJtI.5st7B8fZLpP9RAISxL2Qyv1F-LUAzk_ernUbaqXPriM")
+})
+
+app.get('/', handleRedirect);
 
 //app.get('/', (req, res) => {
 //  res.send('HEY!')
