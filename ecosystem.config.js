@@ -6,7 +6,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'ubuntu',
-      host: 'ec2-54-86-218-127.compute-1.amazonaws.com',
+      host: 'ec2-34-193-90-224.compute-1.amazonaws.com',
       key: '~/.ssl/ieeevrawstoplevelserversshkey.pem',
       ref: 'origin/master',
       repo: 'git@github.com:blairmacintyre/ieeevr-main-online-server.git',
