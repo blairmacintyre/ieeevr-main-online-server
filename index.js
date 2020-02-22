@@ -27,23 +27,28 @@ app.get('/', handleRedirect);
 
 // app.use(express.static('public'))
 
-
 // Starting both http & https servers
 const httpServer = http.createServer(app);
 httpServer.listen(3000, () => console.log('HTTP Server running on port 3000'))
 
 /////////
-// NOTE:  Comment out the next rest of the file if developing locally, since none of the certs
-// will be accessible
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/ieeevr.online/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/ieeevr.online/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/ieeevr.online/chain.pem', 'utf8');
+const privKeyFileName = '/etc/letsencrypt/live/ieeevr.online/privkey.pem'
+const certFileName = '/etc/letsencrypt/live/ieeevr.online/cert.pem'
+const chainFileName = '/etc/letsencrypt/live/ieeevr.online/chain.pem'
 
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca
-};
+if (fs.existsSync(privKeyFileName) && fs.existsSync(certFileName) && fs.existsSync(chainFileName)) {
+  const privateKey = fs.readFileSync(privKeyFileName, 'utf8');
+  const certificate = fs.readFileSync(certFileName, 'utf8');
+  const ca = fs.readFileSync(chainFileName, 'utf8');
 
-const httpsServer = https.createServer(credentials, app);
-httpsServer.listen(3001, () => console.log('HTTPS Server running on port 3001'))
+  const credentials = {
+    key: privateKey,
+    cert: certificate,
+    ca: ca
+  };
+
+  const httpsServer = https.createServer(credentials, app);
+  httpsServer.listen(3001, () => console.log('HTTPS Server running on port 3001'))
+} else {
+  console.log("https certs are not available, not starting https server")
+}

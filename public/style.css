@@ -1,0 +1,135 @@
+.jumbotron-header {
+    height: 100vh;
+    background: url('img/vr-main-header-new.jpg') no-repeat;
+    background-size: cover; 
+    background-attachment: fixed; /* Mini parallax :) */
+}
+
+section {
+    padding: 50px 0 100px 0;
+  }
+
+section#home {
+    padding: 0;
+    text-align: center;
+    color: #FFF;
+}
+
+section#home .home-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.navbar.fixed-top {
+    background-color: transparent!important;
+}
+
+.navbar.fixed-top.scrolled {
+    background-color: #343a40 !important;
+    transition: background-color 200ms linear;
+    color: #FFF!important;
+}
+
+.navbar.fixed-top.scrolled li > a {
+    color: #FFF;
+}
+
+.navbar.fixed-top.scrolled li > a.active {
+    color: rgb(126, 14, 33);
+}
+
+section#about {
+    -webkit-box-shadow: inset 0px -3px 7px -4px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px -3px 7px -4px rgba(0,0,0,0.5);
+    box-shadow: inset 0px -3px 7px -4px rgba(0,0,0,0.5);
+}
+
+section#current {
+    padding-top: 50px;
+}
+
+.about-heading {
+    margin-bottom: 20px;
+}
+
+.current-conference {
+    background: rgb(126, 14, 33);
+    -webkit-box-shadow: inset 0px -3px 7px -4px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px -3px 7px -4px rgba(0,0,0,0.5);
+    box-shadow: inset 0px -3px 7px -4px rgba(0,0,0,0.5);
+}
+
+.current-heading {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.card-current {
+    text-align: center;
+    padding: 20px;
+}
+
+.btn-current {
+    margin-top: 20px;
+}
+
+.past-heading {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+span.title {
+    font-weight: bold;
+}
+span.authors {
+    display: block;
+}
+
+section#past .container .row .col-sm-6 {
+    margin-top: 30px;
+}
+
+section#past {
+    -webkit-box-shadow: inset 0px -3px 7px -4px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px -3px 7px -4px rgba(0,0,0,0.5);
+    box-shadow: inset 0px -3px 7px -4px rgba(0,0,0,0.5);
+}
+
+#past .card-text a {
+    color: #d11313;
+}
+
+.contact-heading {
+    color: #d11313;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+
+
+footer.footer {
+    background: #2c2c2c;
+    padding: 5px;
+    color: #a1a1a1;
+    font-size: 14px;
+}
+
+/* Global text alignment utility */
+.center-text {
+    text-align:center;
+}
+
+.members li {
+    list-style-type: none;
+    margin-bottom: 20px;
+
+}
+
+.white-bg-sm {
+    background: #fff;
+    padding: 5px;
+}
